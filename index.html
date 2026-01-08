@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamezone Top Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    <div class="matrix-rain" id="matrixRain"></div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Gamezone Top up</div>
+            <div class="header-right">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="menu-header">
+            <div class="logo" style="font-size: 1.2rem;">Gamezone Top up</div>
+            <button class="menu-close" id="menuClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <i class="fas fa-sign-in-alt"></i> Masuk
+            </div>
+            <div class="menu-item register">
+                <i class="fas fa-user-plus"></i> Daftar
+            </div>
+        </div>
+    </div>
+<div class="container">
+    <section class="game-section">
+        <h2 class="section-title">Pilih Game</h2>
+        <div class="game-grid">
+            <div class="game-card" data-game="magic_chess">
+                <div class="game-icon">
+                    <img src="mcgg.avif" alt="Magic Chess">
+                </div>
+                <div>
+                    <h3 class="game-title">Magic Chess: Go Go</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="mlbb">
+                <div class="game-icon">
+                    <img src="mlbb.png" alt="Mobile Legends">
+                </div>
+                <div>
+                    <h3 class="game-title">Mobile Legends:</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="ff">
+                <div class="game-icon">
+                    <img src="ff.png" alt="Free Fire">
+                </div>
+                <div>
+                    <h3 class="game-title">Free Fire</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="ff_garena">
+                <div class="game-icon">
+                    <img src="EFootball_colored_logo.svg.png" alt="Free Fire Garena">
+                </div>
+                <div>
+                    <h3 class="game-title">E Football</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="gi">
+                <div class="game-icon">
+                    <img src="GenshinImpact.jpg" alt="Genshin Impact">
+                </div>
+                <div>
+                    <h3 class="game-title">Genshin Impact</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="chamet">
+                <div class="game-icon">
+                    <img src="8_Ball_Pool_cover.jpg" alt="Chamet">
+                </div>
+                <div>
+                    <h3 class="game-title">8 Ball Poll</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="poppo">
+                <div class="game-icon">
+                    <img src="bigo_live.jpg" alt="Poppo Live">
+                </div>
+                <div>
+                    <h3 class="game-title">Bigo Live</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="zenless">
+                <div class="game-icon">
+                    <img src="ROBLOX.png" alt="Zenless Zone Zero">
+                </div>
+                <div>
+                    <h3 class="game-title">ROBLOX</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="hok">
+                <div class="game-icon">
+                    <img src="hok.png" alt="Honor of Kings">
+                </div>
+                <div>
+                    <h3 class="game-title">Honor of Kings</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="pubg">
+                <div class="game-icon">
+                    <img src="pubgm.jpg" alt="PUBG">
+                </div>
+                <div>
+                    <h3 class="game-title">PUBG</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="valorant">
+                <div class="game-icon">
+                    <img src="valorant.jpg" alt="Valorant">
+                </div>
+                <div>
+                    <h3 class="game-title">VALORANT</h3>
+                </div>
+            </div>
+            <div class="game-card" data-game="codm">
+                <div class="game-icon">
+                    <img src="COD.jpg" alt="Call of Duty">
+                </div>
+                <div>
+                    <h3 class="game-title">Call of Duty</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="order-form" id="orderForm" style="display: none;">
+        <div class="form-section" id="data-akun-section">
+            <h3><i class="fas fa-user"></i> Data Akun</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">User ID</label>
+                    <input type="text" class="form-input" id="userId" placeholder="Masukkan User ID">
+                </div>
+                <div class="form-group" id="serverGroup" style="display: none;">
+                    <label class="form-label">Server ID</label>
+                    <input type="text" class="form-input" id="serverId" placeholder="Server ID">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">WhatsApp <span class="optional-label">(opsional)</span></label>
+                    <input type="tel" class="form-input" id="whatsapp" placeholder="08xxxxxxxxxx">
+                </div>
+            </div>
+        </div>
+        <div class="form-section" id="nominal-section">
+            <h3><i class="fas fa-gem"></i> Pilih Nominal</h3>
+            <div class="item-grid" id="itemGrid">
+            </div>
+        </div>
+        <div class="form-section" id="pembayaran-section">
+            <h3><i class="fas fa-credit-card"></i> Metode Pembayaran</h3>
+            <div class="payment-grid">
+                <div class="payment-card" data-payment="dana">
+                    <div class="payment-icon" style="color: #118EEA;">💳</div>
+                    <div class="payment-name">DANA</div>
+                </div>
+                <div class="payment-card" data-payment="ovo">
+                    <div class="payment-icon" style="color: #4C2C92;">💰</div>
+                    <div class="payment-name">OVO</div>
+                </div>
+                <div class="payment-card" data-payment="gopay">
+                    <div class="payment-icon" style="color: #00AA13;">📱</div>
+                    <div class="payment-name">GoPay</div>
+                </div>
+                <div class="payment-card" data-payment="shopee">
+                    <div class="payment-icon" style="color: #EE4D2D;">🛒</div>
+                    <div class="payment-name">ShopeePay</div>
+                </div>
+                <div class="payment-card" data-payment="bank">
+                    <div class="payment-icon" style="color: #FF6B35;">🏦</div>
+                    <div class="payment-name">Transfer Bank</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-section" id="ringkasan-section">
+            <h3><i class="fas fa-receipt"></i> Ringkasan Pesanan</h3>
+            <div class="order-summary">
+                <div class="summary-row">
+                    <span>Game:</span>
+                    <span id="summaryGame">-</span>
+                </div>
+                <div class="summary-row">
+                    <span>Item:</span>
+                    <span id="summaryItem">-</span>
+                </div>
+                <div class="summary-row">
+                    <span>Metode Bayar:</span>
+                    <span id="summaryPayment">-</span>
+                </div>
+                <div class="summary-row subtotal">
+                    <span>Subtotal:</span>
+                    <span id="summarySubtotal">Rp 0</span>
+                </div>
+                <div class="summary-row">
+                    <span>PPN (10%):</span>
+                    <span id="summaryTax">Rp 0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total Bayar:</span>
+                    <span id="summaryTotal">Rp 0</span>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" id="processOrder">
+            <div class="loading" id="loadingSpinner"></div>
+            <span id="btnText">Proses Pesanan</span>
+        </button>
+    </div>
+</div>
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h3 class="modal-title">Pesanan Berhasil!</h3>
+        <p>Pesanan Anda sedang diproses. Silakan lakukan pembayaran sesuai instruksi yang dikirim ke WhatsApp Anda.</p>
+        <p style="margin-top: 15px; color: #00ff88;">ID Transaksi: <span id="transactionId"></span></p>
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-left">
+            &copy; Gamezone Top up. All rights reserved.
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
